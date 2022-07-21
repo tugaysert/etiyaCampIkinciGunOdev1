@@ -3,7 +3,7 @@ import java.util.List;
 
 public class CourseManager {
 
-    private static final CourseManager courseManager = new CourseManager();
+    private static CourseManager courseManager;
 
     private final List<Course> courses = new ArrayList<>();
 
@@ -12,6 +12,10 @@ public class CourseManager {
     }
 
     public static CourseManager getInstance() {
+        if(courseManager == null) {
+            courseManager = new CourseManager();
+        }
+
         return courseManager;
     }
 
