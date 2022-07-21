@@ -43,12 +43,14 @@ public class Main {
         Course course3 = new Course(3, "C++", category2, instructor1);
 
         CourseManager courseManager = CourseManager.getInstance();
+
         courseManager.addToCart(course3);
         courseManager.addToStudentsCourseList(student1, course3);
         System.out.println(student1);
 
         Course course4 = new Course(4, "C", category2, instructor1);
         Course course5 = new Course(5, "TS", category2, instructor1);
+        Course course6 = new Course(6, "HEBELEHUBELE", category2, instructor1);
 
         String courseNames = courseManager.getAll()
                 .stream()
@@ -56,7 +58,7 @@ public class Main {
                 .collect(Collectors.joining(", "));
         System.out.println(courseNames);
 
-
+        courseManager.addToCart(course6);
 
     }
 }
