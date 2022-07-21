@@ -41,12 +41,20 @@ public class Student {
         this.lastName = lastName;
     }
 
+    public String getName() {
+        return getFirstName() + " " + getLastName();
+    }
+
     public List<Course> getCourseList() {
         return courseList;
     }
 
     public void setCourseList(List<Course> courseList) {
         this.courseList = courseList;
+    }
+
+    public void addToCourseList(Course course) {
+        courseList.add(course);
     }
 
     @Override

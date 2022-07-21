@@ -35,8 +35,15 @@ public class Main {
         student1.setId(1);
         student1.setFirstName("Mahmut");
         student1.setLastName("Kirazci");
-        student1.setCourseList(Arrays.asList(course1, course2));
 
+        student1.addToCourseList(course1);
+        student1.addToCourseList(course2);
+
+        Course course3 = new Course(3, "C++", category2, instructor1);
+
+        CourseManager courseManager = new CourseManager();
+        courseManager.addToCart(course3);
+        courseManager.addToStudentsCourseList(student1, course3);
         System.out.println(student1);
 
 
