@@ -50,7 +50,7 @@ public class Main {
 
         Course course4 = new Course(4, "C", category2, instructor1);
         Course course5 = new Course(5, "TS", category2, instructor1);
-        Course course6 = new Course(6, "HEBELEHUBELE", category2, instructor1);
+        Course course6 = new Course(6, "GO", category2, instructor1);
 
         String courseNames = courseManager.getAll()
                 .stream()
