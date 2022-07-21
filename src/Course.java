@@ -10,9 +10,11 @@ public class Course {
 
 
     public Course() {
+        CourseManager.getInstance().add(this);
     }
 
     public Course(int id, String name, Category category, Instructor instructor) {
+        this();
         this.id = id;
         this.name = name;
         this.category = category;
